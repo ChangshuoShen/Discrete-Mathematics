@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./static/imgs/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Discrete Math</title>
+</head>
+
+<body>
+    <!---------- Header Section ---------->
+    <nav class="header">
+        <div class="container | nav__wrapper">
+            <a class="nav__logo" href="#">
+                <h4>Discrete<span>Mathematics～2024</span></h4>
+            </a>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#overview">概述</a></li>
+                <li class="nav__item"><a class="nav__link" href="#content">内容</a></li>
+                <li class="nav__item"><a class="nav__link" href="#progress">进展</a></li>
+                <li class="nav__item"><a class="nav__link" href="#assignments">作业～</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class='fas fa-bars'></i></button>
+            <button id="close-menu-btn"><i class='fas fa-times' style="font-size: 33px;"></i></button>
+        </div>
+    </nav>
+    <!-- Main Content Section -->
+    <div class="container-fluid" style="margin-top: 6rem;">
+        <div class="row">
+            <!-- Left Column: Main Course Content -->
+            <div class="col-lg-9">
+                <section id="main-content">
+                    <div class="main-content-div" id="overview">
+                        <h3>课程概述</h3>
+                        <p>
+                            离散数学是对可数或不同且可分离的数学结构的研究。离散结构的例子有组合、图形和逻辑语句。离散结构可以是有限的或无限的。
+                        </p>
+                        <p>
+                            Discrete mathematics is the study of mathematical structures that are countable or otherwise distinct and separable. Examples of structures that are discrete are combinations, graphs, and logical statements. Discrete structures can be finite or infinite.
+                            <br>
+                            <a href="https://brilliant.org/wiki/discrete-mathematics/" target="_blank">(--Brilliant)</a>
+                        </p>
+                    </div>
+                    <div class="main-content-div" id="content">
+                        <h3>课程内容</h3>
+                        
+                        <div class="timeline">
+                          <div class="timenode">
+                            <div class="meta">
+                                <p><strong>引入：抽屉原理</strong></p>
+                            </div>
+                            <div class="body">
+                                <p>抽屉原理/鸽巢原理作为整个课程的引入</p>
+                                <p>在处理问题时，尝试从优化的角度和反问题的角度来构造抽屉</p>
+                                <p>介绍抽屉原理的其他形式</p>
+                                <p>请多留意其思想在整个课程中的作用</p>
+                            </div>
+                          </div>
+                            <div class="timenode">
+                                <div class="meta">
+                                    <p><strong>第一部分：数论</strong> / Introduction to Number Theory</p>
+                                </div>
+                                <div class="body">
+                                    <p>数论部分内容涵盖整除与唯一分解（裴蜀公式、算术基本定理等）、同余与欧拉定理、中国剩余定理等数论知识</p>
+                                    <p>介绍RSA加密算法</p>
+                                </div>
+                            </div>
+
+                            <div class="timenode">
+                                <div class="meta">
+                                    <p><strong>第二部分：代数结构</strong> / Algebraic Structures</p>
+                                </div>
+                                <div class="body">
+                                    <p>介绍群、环、域等代数结构的基本概念</p>
+                                    <p>在群论的课程中，会讲解到交换群、循环群、群同构、置换群、群作用与轨道公式</p>
+                                    <p>之后从群出发介绍“环”与“域”，以及环的理想等知识</p>
+                                </div>
+                            </div>
+
+                            <div class="timenode">
+                                <div class="meta">
+                                    <p><strong>第三部分：组合数学</strong> / Combinatorics</p>
+                                </div>
+                                <div class="body">
+                                    <!-- <p>最初接触“抽屉原理”</p> -->
+                                    <p>学期中将讲解组合计数的部分内容，包括基础的排列组合（排列包括线排列、圆排列和项链数等），组合恒等式等内容</p>
+                                    <p>随之而来的则是容斥原理与Mobius反演（集合上的、数论中的），请注意容斥原理各种不同场景的应用（如错排问题）以及容斥原理与Mobius反演的等价关系</p>
+                                    <p>此部分的最后，再一窥群作用，并基于此引出Polya计数原理</p>
+                                </div>
+                            </div>
+                        
+                            <div class="timenode">
+                                <div class="meta">
+                                    <p><strong>第四部分：图论</strong> / Graph Theory</p>
+                                </div>
+                                <div class="body">
+                                    <p>图论开局七桥问题、基础的边与顶点染色问题</p>
+                                    <p>然后讲解图相关的基本概念，着手研究图的连通性（无向图的连通，有向图的弱连通、单向连通和强连通等）并介绍Eulerian Circuit（针对边）和Hamilton Cycle（针对点）</p>
+                                    <p>介绍二部图、图同构及图的矩阵表示：邻接矩阵（同数据结构）、关联矩阵，还会介绍图的Laplace矩阵</p>
+                                    <p>图讲得差不多开始讲树(Tree)和图的生成树(Spanning Tree)，其中还会涉及最小生成树及相关算法</p>
+                                    <p>收尾时涉及图的割(Cut)</p>
+                                </div>
+                            </div>
+                        
+                            <div class="timenode">
+                                <div class="meta">
+                                    <p><strong>数理逻辑基础</strong> / Basic Mathematical Logic</p>
+                                </div>
+                                <div class="body">
+                                    <p>讲解逻辑命题、推理规则等数理逻辑基础内容</p>
+                                    <p>（后补）</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content-div" id="progress">
+                        <h3>课程进展</h3>
+                        <table>
+                            <thead>
+                            <tr>
+                            <th align="center">Topic</th>
+                            <th align="center">Date</th>
+                            <th align="center">Lecture Topic</th>
+                            <th align="center">Lecture Notes</th>
+                            <th align="center">Supplement</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td align="center" rowspan="3">抽屉原理</td>
+                                <td align="center">Sep 2</td>
+                                <td align="center">课程介绍&抽屉原理</td>
+                                <td align="center"><a href="./lecture_notes/01课程介绍及抽屉原理.pdf">查看笔记</a></td>
+                                <td align="center"><a href="https://www.bilibili.com/video/BV1aaHreUETw/">课上习题讲解(助教版)</a></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Sep 7</td>
+                                <td align="center">构造抽屉的两个角度</td>
+                                <td align="center"><a href="./lecture_notes/02构造抽屉的两个角度.pdf">查看笔记</a></td>
+                                <td align="center"><a href="https://www.bilibili.com/video/BV1ZkpjeZEGW/">课上部分习题讲解(助教版)</a></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Sep 13</td>
+                                <td align="center">抽屉原理的其他形式</td>
+                                <td align="center"><a href="./lecture_notes/03抽屉原理的其他形式.pdf">查看笔记</a></td>
+                                <td align="center"><a href="https://www.bilibili.com/video/BV1vG4ReqEsG">课上习题讲解(助教版)</a></td>
+                              </tr>
+                              <tr>
+                                <td align="center" rowspan="7">数论</td>
+                                <td align="center">Sep 14</td>
+                                <td align="center">中国剩余定理与裴蜀定理(逆序食用口感更佳)</td>
+                                <td align="center"><a href="./lecture_notes/04中国剩余定理与裴蜀等式.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Sep 20</td>
+                                <td align="center">从整除和裴蜀公式出发</td>
+                                <td align="center"><a href="./lecture_notes/05从整除和裴蜀公式出发.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Sep 23</td>
+                                <td align="center">素数与算术基本定理</td>
+                                <td align="center"><a href="./lecture_notes/06素数与唯一分解.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Sep 23</td>
+                                <td align="center">初识环-不可约元和素元</td>
+                                <td align="center"><a href="./lecture_notes/07初识环-不可约元和素元.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Sep 27</td>
+                                <td align="center">同余&再窥中国剩余定理</td>
+                                <td align="center"><a href="./lecture_notes/08同余&再窥中国剩余定理.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Sep 30 & Oct11</td>
+                                <td align="center">欧拉定理&欧拉函数计算</td>
+                                <td align="center"><a href="./lecture_notes/09欧拉定理&欧拉函数计算.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Oct 11</td>
+                                <td align="center">RSA加密</td>
+                                <td align="center"><a href="./lecture_notes/10RSA加密.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center" rowspan="7">代数结构</td>
+                                <td align="center">Oct 14</td>
+                                <td align="center">群的定义与性质</td>
+                                <td align="center"><a href="./lecture_notes/11群的定义及性质.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Oct 18</td>
+                                <td align="center">有限群的定义与陪集分解(有限和无限群)</td>
+                                <td align="center"><a href="./lecture_notes/12有限群的定义与陪集分解.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Oct 21 & Oct 28</td>
+                                <td align="center">循环群与群同构</td>
+                                <td align="center"><a href="./lecture_notes/13循环群与群同构.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Oct 28</td>
+                                <td align="center">置换群(手动添加轨道公式)</td>
+                                <td align="center"><a href="./lecture_notes/14置换群.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Nov 8</td>
+                                <td align="center">环和整环-域</td>
+                                <td align="center"><a href="./lecture_notes/15环整环和域.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">Nov 22&23&25</td>
+                                <td align="center">理想-主理想-素理想-极大理想</td>
+                                <td align="center"><a href="./lecture_notes/16理想-主理想-素理想-极大理想.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">NAN</td>
+                                <td align="center">子环-理想-商环</td>
+                                <td align="center"><a href="./lecture_notes/17子环-理想-商环.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center" rowspan="4">组合计数</td>
+                                <td align="center">Nov 29</td>
+                                <td align="center">各种排列</td>
+                                <td align="center"><a href="./lecture_notes/18各种排列.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">~~</td>
+                                <td align="center">组合恒等式</td>
+                                <td align="center"><a href="./lecture_notes/19组合恒等式.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">~~</td>
+                                <td align="center">容斥原理</td>
+                                <td align="center"><a href="./lecture_notes/20容斥原理.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center">~~</td>
+                                <td align="center">Mobius反演</td>
+                                <td align="center">[<a href="./lecture_notes/21Mobius反演.pdf">查看笔记</a>][<a href="./lecture_notes/21Mobius反演(2).pdf">查看笔记</a>]</td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center" rowspan="1">图论</td>
+                                <td align="center">~~~</td>
+                                <td align="center">图论部分笔记参考</td>
+                                <td align="center"><a href="./lecture_notes/图论部分笔记参考.pdf">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <!-- <tr>
+                                <td align="center"></td>
+                                <td align="center"></td>
+                                <td align="center"><a href="">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center"></td>
+                                <td align="center"></td>
+                                <td align="center"><a href="">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center"></td>
+                                <td align="center"></td>
+                                <td align="center"><a href="">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center"></td>
+                                <td align="center"></td>
+                                <td align="center"><a href="">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr>
+                              <tr>
+                                <td align="center"></td>
+                                <td align="center"></td>
+                                <td align="center"><a href="">查看笔记</a></td>
+                                <td align="center"></td>
+                              </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="main-content-div" id="assignments">
+                        <h3>作业（已移除）</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Assignment Topic</th>
+                                    <th>Download Link</th>
+                                    <th>Deadline</th>
+                                    <th>Sample Answer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>抽屉原理</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>初等数论</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>代数结构（群论）</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>  
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>代数结构（环论）</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td>组合计数</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>6</td>
+                                  <td>组合计数</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>7</td>
+                                  <td>图论</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Additional Information -->
+            <div class="col-lg-3">
+                <section id="references">
+                    <h6>参考资料</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="./static/resources/组合数学引论.pdf">
+                                <img src="./static/imgs/ref01.png" alt="ref01">
+                                <p class="small">组合数学引论</p>
+                            </a> 
+                        </div>
+                        <div class="col-md-4">
+                            <a href="./static/resources/代数结构2009.pdf">
+                                <img src="./static/imgs/ref02.png" alt="ref02">
+                                <p class="small">代数结构</p>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="http://staff.ustc.edu.cn/~xujm/indexChinesegraphs_4.htm">
+                                <img src="./static/imgs/ref03.png" alt="ref03">
+                                <p class="small">图论及其应用</p>
+                            </a>
+                        </div>
+                    </div>                    
+                </section>
+                <section id="class-info">
+                  <h6>重要通知</h6>
+                  <ul>
+                    <!-- <li>由于老师出差，9月2日第一节课后调，9月6日周五上第一节课，调课时间后续通知</li> -->
+                  </ul>
+              </section>
+                <section id="class-info">
+                    <h6>上课时间、地点</h6>
+                    <p>3A311:1(1, 2), 5(8, 9)</p>
+                    <p>1~18周</p>
+                </section>
+                <section id="course replay">
+                  <h6>课程回放</h6>
+                  <p>回放链接：<a href="#">111</a></p>
+              </section>
+                <section id="teacher">
+                    <h6>课程主讲</h6>
+                    <div>
+                        <p>邵帅</p>
+                        <p>个人主页：<a href="http://staff.ustc.edu.cn/~wwwucuc/" target="_blank">http://staff.ustc.edu.cn/~wwwucuc/</a></p>
+                        <p>邮箱：<a href="mailto:shao10@ustc.edu.cn">shao10@ustc.edu.cn</a></p>
+                        <p><a href="https://map.ustc.edu.cn/">办公室：西区科技楼西楼613</a></p>
+                    </div>
+                </section>
+                <section id="tas">
+                    <h6>助教</h6>
+                    <p>
+                        <a href="https://changshuoshen.github.io" target="_blank">申长硕</a>:
+                        <a href="mailto:shenc217@163.com">shenc217@163.com</a>
+                    </p>
+                    <p>
+                      王元叙:
+                      <a href="mailto:konjacwyx@mail.ustc.edu.cn">konjacwyx@mail.ustc.edu.cn</a>
+                  </p>
+                </section>
+                <section id="exams">
+                    <h6>考试信息</h6>
+                    <p>期中重点考察数论和抽象代数部分内容</p>
+                    <p>期末重点考察组合及图论相关内容</p>
+                    <p>...</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <!---------- Footer Section ---------->
+    <footer>
+        <div class="footer__copyright">
+            <small>Copyright &copy; Discrete Mathematics 2024, All rights reserved</small>
+        </div>
+    </footer>
+    <script src="./static/js/script.js"></script>
+</body>
+
+</html>
